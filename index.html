@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Colored Paragraphs Example</title>
+         <div id="header-placeholder"></div>
+        <script>
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                });
+        </script>
     <style>
         .red-paragraph {
             color: red;
